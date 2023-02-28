@@ -213,7 +213,7 @@ class TableCalendar<T> extends StatefulWidget {
 
   /// Creates a `TableCalendar` widget.
   TableCalendar({
-    Key? key,
+    super.key,
     required DateTime focusedDay,
     required DateTime firstDay,
     required DateTime lastDay,
@@ -278,8 +278,7 @@ class TableCalendar<T> extends StatefulWidget {
         focusedDay = normalizeDate(focusedDay),
         firstDay = normalizeDate(firstDay),
         lastDay = normalizeDate(lastDay),
-        currentDay = currentDay ?? DateTime.now(),
-        super(key: key);
+        currentDay = currentDay ?? DateTime.now();
 
   @override
   _TableCalendarState<T> createState() => _TableCalendarState<T>();

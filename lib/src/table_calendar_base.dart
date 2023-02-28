@@ -40,7 +40,7 @@ class TableCalendarBase extends StatefulWidget {
   final void Function(PageController pageController)? onCalendarCreated;
 
   TableCalendarBase({
-    Key? key,
+    super.key,
     required this.firstDay,
     required this.lastDay,
     required this.focusedDay,
@@ -78,9 +78,7 @@ class TableCalendarBase extends StatefulWidget {
     this.onCalendarCreated,
   })  : assert(!dowVisible || (dowHeight != null && dowBuilder != null)),
         assert(isSameDay(focusedDay, firstDay) || focusedDay.isAfter(firstDay)),
-        assert(isSameDay(focusedDay, lastDay) || focusedDay.isBefore(lastDay)),
-        super(key: key);
-
+        assert(isSameDay(focusedDay, lastDay) || focusedDay.isBefore(lastDay));
   @override
   _TableCalendarBaseState createState() => _TableCalendarBaseState();
 }
