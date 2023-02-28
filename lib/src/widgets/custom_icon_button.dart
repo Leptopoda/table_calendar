@@ -15,7 +15,7 @@ class CustomIconButton extends StatelessWidget {
     Key? key,
     required this.icon,
     required this.onTap,
-    this.margin = const EdgeInsets.all(0.0),
+    this.margin = EdgeInsets.zero,
     this.padding = const EdgeInsets.all(8.0),
   }) : super(key: key);
 
