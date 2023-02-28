@@ -4,9 +4,11 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../utils.dart';
+import 'package:table_calendar_example/utils.dart';
 
 class TableRangeExample extends StatefulWidget {
+  const TableRangeExample({Key? key}) : super(key: key);
+
   @override
   _TableRangeExampleState createState() => _TableRangeExampleState();
 }
@@ -24,7 +26,7 @@ class _TableRangeExampleState extends State<TableRangeExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TableCalendar - Range'),
+        title: const Text('TableCalendar - Range'),
       ),
       body: TableCalendar(
         firstDay: kFirstDay,
